@@ -1,0 +1,37 @@
+4.01
+26/07/2026
+Outlook Restart Required:,True
+*** Test of update ***
+First release of the new VSTO-based EmailSync add-in.
+Full rewrite of the sync engine, duplicate handling, and folder
+management, migrated from the original VBA version. Debug logging
+and error reporting have also been substantially improved.
+EOF
+EmailSyncSetup.msi,https://github.com/EmailSync-au/EmailSync-Distribution/releases/download/v4.01/EmailSyncSetup.msi
+EOF
+
+
+
+Developer notes for update settings (new VSTO / GitHub format):
+Line 1: Version number (e.g. "4.0") — parsed as Double, must be a valid number
+Line 2: Version date (informational only, not parsed for logic)
+Line 3: Outlook Restart Required:,True or False
+         True whenever the add-in DLL itself is being replaced (i.e. almost
+         every real release) — the DLL is locked in memory while Outlook
+         runs, so it can only be replaced via the MSI + Outlook restart path.
+         False is only valid for a soft update shipping a standalone file
+         that Outlook does NOT hold a lock on (e.g. UserGuide.pdf on its own).
+Line 4..n: What's New notes — free text, shown verbatim in the update prompt
+Line n: EOF
+Line n+1: [FileName],[https://github.com/... direct download URL]
+           — for a hard update (reboot=True): exactly one entry, the .msi
+             release asset (release-download URL, NOT raw.githubusercontent).
+           — for a soft update (reboot=False): one or more entries, individual
+             files such as UserGuide.pdf. Destination directory is no longer
+             specified here — ResolveSoftUpdateDestination() in
+             UpdateChecker.vb decides it based on the file name.
+Line n+i+1: EOF
+
+Note: StopWords.txt is NOT listed here. It is checked and self-healed
+independently at every Outlook startup (SyncEngine.StartUp), regardless of
+software version — see the "Required file" step there, not this manifest.
