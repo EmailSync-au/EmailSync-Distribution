@@ -1,7 +1,7 @@
-4.01
-26/07/2026
+4.02
+30/07/2026
 Outlook Restart Required:,True
-*** Test of update ***
+*** Test 2 of update ***
 First release of the new VSTO-based EmailSync add-in.
 Full rewrite of the sync engine, duplicate handling, and folder
 management, migrated from the original VBA version. Debug logging
