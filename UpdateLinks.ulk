@@ -7,7 +7,7 @@ Full rewrite of the sync engine, duplicate handling, and folder
 management, migrated from the original VBA version. Debug logging
 and error reporting have also been substantially improved.
 EOF
-EmailSyncSetup.msi,https://github.com/EmailSync-au/EmailSync-Distribution/releases/download/v4.01/EmailSyncSetup.msi
+EmailSyncSetup.msi,https://github.com/EmailSync-au/EmailSync-Distribution/releases/download/v4.02/EmailSyncSetup.msi
 EOF
 
 
