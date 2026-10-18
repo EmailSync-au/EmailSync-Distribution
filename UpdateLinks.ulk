@@ -8,7 +8,7 @@ management, migrated from the original VBA version.
 New Statistics module added, and Debug logging
 and error reporting have also been substantially improved.
 EOF
-EmailSyncSetup.msi,https://github.com/EmailSync-au/EmailSync-Distribution/releases/download/v4.15/EmailSyncSetup.msi
+EmailSyncSetup.msi,https://github.com/EmailSync-au/EmailSync-Distribution/releases/download/v4.16/EmailSyncSetup.msi
 EOF
 
 
