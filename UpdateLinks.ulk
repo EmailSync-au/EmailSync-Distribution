@@ -1,14 +1,14 @@
-4.16
-19/10/2026
+4.17
+20/10/2026
 Outlook Restart Required:,True
-*** Test 16 of update ***
+*** Test 17 of update ***
 Update release of the new VSTO-based EmailSync add-in.
 Full rewrite of the sync engine, duplicate handling, and folder
 management, migrated from the original VBA version. 
-New Statistics module added, and Debug logging
+New Statistic module added, and Debug logging
 and error reporting have also been substantially improved.
 EOF
-EmailSyncSetup.msi,https://github.com/EmailSync-au/EmailSync-Distribution/releases/download/v4.16/EmailSyncSetup.msi
+EmailSyncSetup.msi,https://github.com/EmailSync-au/EmailSync-Distribution/releases/download/v4.17/EmailSyncSetup.msi
 EOF
 
 
